@@ -4,5 +4,5 @@ export interface GenericRepository<T> {
     add(entity: T): Promise<any>
     findById(id: string): Promise<any>
     delete(id: string): Promise<void>
-    pageable(request: any): Promise<any>
+    pageable(page: number, limit: number, search: string): Promise<{ data: T[], total: number }>;
 }

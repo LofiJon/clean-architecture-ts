@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres_example
+    environment:
+      POSTGRES_USER: example_user
+      POSTGRES_PASSWORD: example_password
+      POSTGRES_DB: postgres_example
+      PGUSER: example_user
+    ports:
+      - "5432:5432"
